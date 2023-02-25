@@ -10,7 +10,7 @@ def home(request):
 
 def recipe(request, recipe_id):
     return render(request, 'home/pages/recipe-view.html', context={
-        'recipe': make_recipe(),
+        'recipe': make_recipe(), 'is_detail_page': True,
     })
 
 
