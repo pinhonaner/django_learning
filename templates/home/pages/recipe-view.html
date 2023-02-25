@@ -1,7 +1,11 @@
 {% extends 'global/pages/base.html' %}
 
+{% block title %}
+    Details |
+{% endblock title %}
+
 {% block content %}
-<div class="main-content main-content-detail container">
-    {% include 'home/partials/recipe.html' %}
-</div>    
+    <div class="main-content main-content-detail container">
+        {% include 'home/partials/recipe.html' %}
+    </div>    
 {% endblock content %}
