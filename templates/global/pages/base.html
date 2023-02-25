@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% include 'global/partials/head.html' %}
+<body>
+    {% include 'global/partials/header.html' %}
+    {% include 'home/partials/search.html' %}
+
+    <main class="main-content-container">
+        {% block content %}
+            
+        {% endblock content %}
+    </main>
+
+    {% include 'global/partials/footer.html' %}
+</body>
+</html>
