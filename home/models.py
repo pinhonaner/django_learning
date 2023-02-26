@@ -23,8 +23,8 @@ class Recipe(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
-    cover = models.ImageField(upload_to='home/covers/%Y/%m/%d', null=True)
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    cover = models.ImageField(upload_to='home/covers/%Y/%m/%d', null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, default=None,)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
