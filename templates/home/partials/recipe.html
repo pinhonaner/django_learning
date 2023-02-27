@@ -15,7 +15,7 @@
     <div class="recipe-author">
         <span class="recipe-author-item">
             <i class="fas fa-user"></i>
-            {% if author is not None %}
+            {% if recipe.author.username is not None %}
                 <i>
                     {% if recipe.author.first_name %}
                         {{ recipe.author.first_name }} {{ recipe.author.last_name }}
@@ -23,7 +23,7 @@
                         {{recipe.author.username}}
                     {% endif %}
                 </i>
-            {% else %}
+            {% elif recipe.author.username is None %}
                 Desconhecido 
             {% endif %}
         </span>
