@@ -10,6 +10,7 @@ def home(request):
     ).order_by('-id')
     return render(request, 'home/pages/home.html', context={
         'recipes': recipes,
+        'title': f'{recipes.first().category.name}'
     })
 
 def category(request, category_id):
